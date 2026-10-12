@@ -31,7 +31,7 @@ def record_metrics(response):
 
 @app.route("/")
 def index():
-    return jsonify(message="Hello from the DevOps CI/CD lab", version=APP_VERSION)
+    return jsonify(message="Hello from the DevOps CI/CD lab message is added", version=APP_VERSION)
 
 
 @app.route("/health")
