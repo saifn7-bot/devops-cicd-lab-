@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_USER = 'saifn7
+    DOCKERHUB_USER = 'saifn7'
     IMAGE_NAME     = "${DOCKERHUB_USER}/devops-webapp"
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE          = "${IMAGE_NAME}:${IMAGE_TAG}"
