@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKERHUB_USER = 'saifn7'
+    DOCKERHUB_USER = 'saifn7
     IMAGE_NAME     = "${DOCKERHUB_USER}/devops-webapp"
     IMAGE_TAG      = "${env.BUILD_NUMBER}"
     IMAGE          = "${IMAGE_NAME}:${IMAGE_TAG}"
@@ -45,7 +45,7 @@ pipeline {
 
     stage('Build image') {
       steps {
-        sh 'docker build --build-arg APP_VERSION=${IMAGE_TAG} -t ${IMAGE} -t ${IMAGE_NAME}:latest .'
+        sh 'docker build --pull --build-arg APP_VERSION=${IMAGE_TAG} -t ${IMAGE} -t ${IMAGE_NAME}:latest .'
       }
     }
 
